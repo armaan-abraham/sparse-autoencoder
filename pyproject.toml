@@ -1,0 +1,36 @@
+[project]
+name = "sparse-autoencoder"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Armaan Abraham", email = "armaanabraham@g.ucla.edu" }
+]
+dependencies = [
+    "torch>=2.5.0",
+    "transformer-lens>=2.7.0",
+    "einops>=0.8.0",
+    "tqdm>=4.66.5",
+    "wandb>=0.18.5",
+    "ipykernel>=6.29.5",
+    "datasets>=3.0.1",
+    "seaborn>=0.13.2",
+    "matplotlib>=3.9.2",
+    "fancy-einsum>=0.0.3",
+    "scipy>=1.14.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/_sparse_autoencoder"]
